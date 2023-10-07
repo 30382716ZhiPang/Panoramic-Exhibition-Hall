@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+	</head>
+	<body>
+    	<video controls muted src="../../media/批量生产/作者：欧阳杏·祝缅  作品类型：书法  作品名称：坚守初心 戳力践行.mp3" autoplay id="music" style="display:none"></video>
+		<div class="swiper-container main-swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="img swiper-zoom-container">
+						<img data-src="../../images/老领导55/书画_52_52/欧阳杏-坚守初心.jpg" height="100%" class="swiper-lazy">
+					</div>
+					<div class="swiper-lazy-preloader"></div>
+				</div>
+			</div>
+			<!-- 如果需要分页器 
+			<div class="swiper-pagination"></div>-->
+
+			<!-- 如果需要导航按钮 -->
+			<!--<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>-->
+
+			<!-- 如果需要滚动条 
+			<div class="swiper-scrollbar"></div>-->
+		</div>
+		<script src="../js/swiper.min.js"> </script>
+		<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+			//封装函数让谷歌浏览器自动播放
+			function play() {
+			  var music = document.getElementById("music"); 
+		　　　　//判断如果音乐停止播放中，就让他播放。。。
+			  if (music.paused) { 
+				music.paused = false;
+				music.play(); 
+				music.muted = false;
+			  }
+			}
+		　　　//调用函数
+			setInterval(play(), 1);
+  		</script>
+	</body>
+</html>
